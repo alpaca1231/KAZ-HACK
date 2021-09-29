@@ -18,6 +18,8 @@ const StyledHeading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
+  /* padding: 10rem 0 5rem; */
   h2 {
     font-size: 36px;
     letter-spacing: 0.1em;

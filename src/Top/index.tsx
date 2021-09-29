@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-const Top: React.VFC = () => {
+const Top: React.FC = () => {
   return (
     <StyledTop>
       <Image src='/eyecatch.svg' width={360} height={300} />
@@ -22,7 +22,7 @@ const StyledTop = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10rem 0 20rem;
+  margin: 10rem 0;
   .catchcopy {
     display: flex;
     justify-content: center;
