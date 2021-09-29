@@ -1,10 +1,10 @@
 export const theme = {
   color: '#333',
-  background: '#E5E5E5',
+  background: '#dadada',
   colors: {
-    red: '#FF3300',
-    blue: '#0000FF',
-    yellow: '#FFFF00',
+    mint: '#08ffc8',
+    white: '#fff7f7',
+    navy: '#204969',
   },
 }
 type theme = typeof theme
