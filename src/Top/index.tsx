@@ -22,14 +22,17 @@ const StyledTop = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10rem 0 20rem;
   .catchcopy {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    line-height: 42px;
     h1 {
-      font-size: 36px;
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      padding-bottom: 1rem;
     }
     p {
       font-size: 24px;
