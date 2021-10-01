@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ChevronDown } from 'akar-icons'
 import styled from 'styled-components'
 
-const Top: React.VFC = () => {
+const Top: React.FC = () => {
   return (
     <StyledTop>
       <Image src='/eyecatch.svg' width={500} height={400} />

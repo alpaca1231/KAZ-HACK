@@ -4,8 +4,6 @@ import reset from 'styled-reset'
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
   html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
