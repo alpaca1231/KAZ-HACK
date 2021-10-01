@@ -1,7 +1,14 @@
-import React from 'react'
+import { FC } from 'react'
+import styled from 'styled-components'
 
-const about = () => {
-  return <div>Hallo</div>
+const about: FC = () => {
+  return (
+    <Styledabout>
+      <h1>Hello</h1>
+    </Styledabout>
+  )
 }
 
 export default about
+
+const Styledabout = styled.div``

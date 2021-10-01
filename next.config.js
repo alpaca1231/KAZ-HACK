@@ -1,8 +1,7 @@
 const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
+  extension: /\.mdx$/,
 })
 
 module.exports = withMDX({
-  reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 })
