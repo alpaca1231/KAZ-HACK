@@ -47,7 +47,6 @@ const StyledOutputCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 1px dashed ${(props) => props.theme.colors.navy};
     padding-right: 3rem;
   }
   .content {
