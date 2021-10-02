@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Heading } from 'src/components/Heading'
-import ProfileMdx from './Profile.mdx' // ts2307が解決できない
+import ProfileMdx from './Profile.mdx'
 import styled from 'styled-components'
 
 const Profile: React.FC = () => {
@@ -29,15 +29,14 @@ const StyledProfile = styled.div`
   padding: 10rem 0;
   .prof {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center;
     margin: 0 auto;
     &_img {
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin: 0 auto;
+      margin-right: 5rem;
     }
   }
   .myPhoto {
