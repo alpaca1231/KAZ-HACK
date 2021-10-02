@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Heading } from 'src/components/Heading'
+import ProfileMdx from './Profile.mdx'
 import styled from 'styled-components'
 
 const Profile: React.FC = () => {
@@ -12,18 +13,10 @@ const Profile: React.FC = () => {
         <div className='prof_img'>
           <Image className='myPhoto' src='/myPhoto.jpg' width={200} height={200} layout='fixed' />
         </div>
-        <div className='content'>
-          <p className='content_name'>Kazuki Amatatsu | 天辰 一希</p>
-          <div className='content_job'>
-            <p>Front-end Engineer</p>
-            <p>Information and communications Engineer</p>
-          </div>
-          <p className='content_bd'>1996年12月31日生まれ</p>
-          <p className='content_live'>大阪府在住</p>
-        </div>
+        <ProfileMdx />
       </div>
       <Link href='/about'>
-        <div className='ph_btn'>Personal History</div>
+        <div className='dp_btn'>Detailed profile</div>
       </Link>
     </StyledProfile>
   )
@@ -36,39 +29,21 @@ const StyledProfile = styled.div`
   padding: 10rem 0;
   .prof {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center;
     margin: 0 auto;
     &_img {
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin: 0 auto;
+      margin-right: 5rem;
     }
+  }
+  .myPhoto {
+    border-radius: 50%;
   }
 
-  .myPhoto {
-    border-radius: 100%;
-  }
-  .content {
-    width: 60%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 20px;
-    &_name {
-      font-size: 24px;
-      line-height: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    &_job {
-      margin-bottom: 20px;
-    }
-  }
-  .ph_btn {
+  .dp_btn {
     display: flex;
     justify-content: center;
     align-items: center;
