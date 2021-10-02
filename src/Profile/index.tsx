@@ -2,7 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Heading } from 'src/components/Heading'
+import { ChevronRight } from 'akar-icons'
 import ProfileMdx from './Profile.mdx'
+
 import styled from 'styled-components'
 
 const Profile: React.FC = () => {
@@ -16,7 +18,9 @@ const Profile: React.FC = () => {
         <ProfileMdx />
       </div>
       <Link href='/about'>
-        <div className='dp_btn'>Detailed profile</div>
+        <div className='dp_btn'>
+          Detailed profile <ChevronRight size={24} />
+        </div>
       </Link>
     </StyledProfile>
   )
