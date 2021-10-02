@@ -10,7 +10,7 @@ const Output: FC = () => {
       <Heading>Output</Heading>
       <div className='OutputCards'>
         <OutputCard
-          src={'/eyecatch.svg'}
+          src={'/indianPoker.gif'}
           url={'https://indian-poker-six.vercel.app/'}
           github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
         >
