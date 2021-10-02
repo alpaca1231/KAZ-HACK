@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Top from 'src/Top'
 import Profile from 'src/Profile'
 import Output from 'src/Output'

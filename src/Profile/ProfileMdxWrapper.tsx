@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const ProfilesMdxWrapper: React.FC = ({ children }) => {
-  return <StyledProfilesMdxWrapper>{children}</StyledProfilesMdxWrapper>
+export const ProfileMdxWrapper: React.FC = ({ children }) => {
+  return <StyledProfileMdxWrapper>{children}</StyledProfileMdxWrapper>
 }
 
-const StyledProfilesMdxWrapper = styled.div`
+const StyledProfileMdxWrapper = styled.div`
   text-align: center;
   letter-spacing: 0.05em;
   font-size: 20px;
