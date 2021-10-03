@@ -1,14 +1,15 @@
 import { FC } from 'react'
+import About from 'src/About'
 import styled from 'styled-components'
 
 const about: FC = () => {
   return (
-    <Styledabout>
-      <h1>Hello</h1>
-    </Styledabout>
+    <AboutPage>
+      <About />
+    </AboutPage>
   )
 }
 
 export default about
 
-const Styledabout = styled.div``
+const AboutPage = styled.div``

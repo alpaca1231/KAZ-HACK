@@ -1,9 +1,10 @@
 import { FC, useState } from 'react'
 import { init, send } from 'emailjs-com'
 import { Heading } from 'src/components/Heading'
+import { HomeIcon } from 'src/components/HomeIcon'
 import { useRouter } from 'next/router'
 import { Grid, TextField } from '@material-ui/core'
-import { Send, Home } from 'akar-icons'
+import { Send } from 'akar-icons'
 import styled from 'styled-components'
 
 const MailForm: FC = () => {
@@ -104,9 +105,7 @@ const MailForm: FC = () => {
           </form>
         </Grid>
       </Grid>
-      <div className='home' onClick={() => router.push({ pathname: '/' })}>
-        <Home size={30} />
-      </div>
+      <HomeIcon />
     </StyledMailForm>
   )
 }
@@ -126,10 +125,5 @@ const StyledMailForm = styled.div`
   }
   .submit_btn {
     margin: 3rem auto 0;
-  }
-  .home {
-    position: absolute;
-    right: 3rem;
-    bottom: 3rem;
   }
 `

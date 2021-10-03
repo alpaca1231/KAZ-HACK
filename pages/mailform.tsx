@@ -4,12 +4,12 @@ import styled from 'styled-components'
 
 const mailform: FC = () => {
   return (
-    <Styledmailform>
+    <MailFormPage>
       <MailForm />
-    </Styledmailform>
+    </MailFormPage>
   )
 }
 
 export default mailform
 
-const Styledmailform = styled.div``
+const MailFormPage = styled.div``
