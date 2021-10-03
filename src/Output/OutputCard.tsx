@@ -22,12 +22,12 @@ export const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_u
       <div className='content'>
         {children}
         <div className='content_btn'>
-          <a href={url} className='url_btn' target='_blank'>
-            URL
+          <a href={url} className='btn url_btn' target='_blank'>
+            URL&nbsp;
             <LinkOut size={24} />
           </a>
-          <a href={github_url} className='github_btn' target='_blank'>
-            Github
+          <a href={github_url} className='btn github_btn' target='_blank'>
+            GitHub&nbsp;
             <OctocatFill size={24} />
           </a>
         </div>
@@ -58,24 +58,11 @@ const StyledOutputCard = styled.div`
     }
     .url_btn,
     .github_btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-size: 20px;
-      width: 10rem;
-      height: 4rem;
-      margin: 2rem;
-      border: 2px solid ${(props) => props.theme.colors.navy};
-      background: ${(props) => props.theme.colors.white};
-      text-decoration: none;
-      transition: 0.5s;
       color: ${(props) => props.theme.color};
-      &:hover {
-        color: ${(props) => props.theme.colors.white};
-        background: ${(props) => props.theme.colors.navy};
-        font-weight: bold;
-      }
+      margin: 2rem;
+    }
+    .github_btn {
+      width: 12rem;
     }
   }
 `
