@@ -35,7 +35,12 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang='ja'>
-        <Head></Head>
+        <Head>
+          <link
+            href='https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto:wght@300;400;700&display=swap'
+            rel='stylesheet'
+          ></link>
+        </Head>
         <body>
           <Main />
           <NextScript />
