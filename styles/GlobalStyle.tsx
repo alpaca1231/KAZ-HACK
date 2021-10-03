@@ -15,6 +15,26 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     color: #333;
   }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5rem auto 0;
+    width: 10rem;
+    height: 5rem;
+    border: 2px solid ${(props) => props.theme.colors.navy};
+    background: ${(props) => props.theme.colors.white};
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+    &:hover {
+      color: ${(props) => props.theme.colors.white};
+      background: ${(props) => props.theme.colors.navy};
+      font-weight: bold;
+    }
+  }
 `
 
 export default GlobalStyle

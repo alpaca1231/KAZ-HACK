@@ -18,8 +18,9 @@ const Profile: React.FC = () => {
         <ProfileMdx />
       </div>
       <Link href='/about'>
-        <div className='dp_btn'>
-          Detailed profile <ChevronRight size={24} />
+        <div className='btn dp_btn'>
+          Detailed profile&nbsp;
+          <ChevronRight size={24} />
         </div>
       </Link>
     </StyledProfile>
@@ -48,22 +49,7 @@ const StyledProfile = styled.div`
   }
 
   .dp_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     margin: 80px auto 0;
-    font-size: 20px;
-    width: 20rem;
-    height: 5rem;
-    border: 2px solid ${(props) => props.theme.colors.navy};
-    background: #fff;
-    text-decoration: none;
-    transition: 0.5s;
-    &:hover {
-      color: #fff;
-      background: ${(props) => props.theme.colors.navy};
-      font-weight: bold;
-    }
+    width: 25rem;
   }
 `
