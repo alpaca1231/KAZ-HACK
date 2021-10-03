@@ -60,6 +60,9 @@ const StyledOutputCard = styled.div`
     .github_btn {
       color: ${(props) => props.theme.color};
       margin: 2rem;
+      &:hover {
+        color: ${(props) => props.theme.colors.white};
+      }
     }
     .github_btn {
       width: 12rem;
