@@ -19,7 +19,7 @@ const Profile: React.FC = () => {
       </div>
       <Link href='/about'>
         <div className='btn dp_btn'>
-          Detailed profile&nbsp;
+          Resume&nbsp;
           <ChevronRight size={24} />
         </div>
       </Link>
@@ -50,6 +50,6 @@ const StyledProfile = styled.div`
 
   .dp_btn {
     margin: 80px auto 0;
-    width: 25rem;
+    width: 15rem;
   }
 `
