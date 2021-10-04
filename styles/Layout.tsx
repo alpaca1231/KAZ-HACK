@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export const Layout: React.FC = ({ children }) => {
   return (
-    <>
+    <div className='bg'>
       <StyledHeader>
         <div className='logo'></div>
         <Link href='/'>
@@ -14,12 +14,16 @@ export const Layout: React.FC = ({ children }) => {
         </Link>
         {/* <BurgerMenu /> */}
       </StyledHeader>
-      <StyledMain className='bg'>{children}</StyledMain>
-      <StyledFooter></StyledFooter>
-    </>
+      <StyledMain>{children}</StyledMain>
+      <StyledFooter>Copyright © KAZ HACK 2021</StyledFooter>
+    </div>
   )
 }
 
 const StyledHeader = styled.header``
 const StyledMain = styled.main``
-const StyledFooter = styled.footer``
+const StyledFooter = styled.footer`
+  text-align: center;
+  font-size: 12px;
+  height: 32px;
+`
