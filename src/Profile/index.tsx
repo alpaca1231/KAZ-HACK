@@ -4,9 +4,11 @@ import Link from 'next/link'
 import { Heading } from 'src/components/Heading'
 import { ChevronRight } from 'akar-icons'
 import ProfileMdx from './Profile.mdx'
-import ScrollRevealContainer from 'src/components/ScrollRevealContainer'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
+
+import dynamic from 'next/dynamic'
+const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
 const Profile: React.FC = () => {
   return (

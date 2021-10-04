@@ -2,7 +2,8 @@ import Top from 'src/Top'
 import Profile from 'src/Profile'
 import Output from 'src/Output'
 import Contact from 'src/Contact'
-import ScrollRevealContainer from 'src/components/ScrollRevealContainer'
+import dynamic from 'next/dynamic'
+const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
 export default function Home() {
   return (

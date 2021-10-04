@@ -2,9 +2,11 @@ import { FC } from 'react'
 import { Heading } from 'src/components/Heading'
 import { OutputCard } from './OutputCard'
 import IndianPoker from './IndianPoker.mdx'
-import ScrollRevealContainer from 'src/components/ScrollRevealContainer'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
+
+import dynamic from 'next/dynamic'
+const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
 const Output: FC = () => {
   return (
