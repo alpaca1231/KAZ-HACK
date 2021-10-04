@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { Heading } from 'src/components/Heading'
 import { ChevronRight } from 'akar-icons'
 import ProfileMdx from './Profile.mdx'
-
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 const Profile: React.FC = () => {
   return (
@@ -52,4 +52,17 @@ const StyledProfile = styled.div`
     margin: 80px auto 0;
     width: 15rem;
   }
+  ${sp`
+  padding: 5rem 0;
+  .prof {
+    display: block;
+    &_img {
+      margin: 0 auto;
+    }
+  }
+  .dp_btn {
+    margin: 5rem auto 0;
+    width: 10rem;
+  }
+  `}
 `

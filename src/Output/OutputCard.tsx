@@ -2,6 +2,7 @@ import { VFC } from 'react'
 import Image from 'next/image'
 import { LinkOut, OctocatFill } from 'akar-icons'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 type OutputCardProps = {
   className?: string
@@ -37,8 +38,7 @@ export const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_u
 }
 
 const StyledOutputCard = styled.div`
-  width: 90vw;
-  height: 40rem;
+  width: 80vw;
   display: flex;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.white};
@@ -68,4 +68,22 @@ const StyledOutputCard = styled.div`
       width: 12rem;
     }
   }
+  ${sp`
+    display: block;
+    padding: 2rem;
+    .sample_img {
+      padding: 2rem 0;
+    }
+    .content {
+      width: 100%;
+      padding: 0rem;
+      .url_btn,
+      .github_btn {
+        margin: 1rem;
+      }
+      .github_btn {
+        width: 10rem;
+      }
+    }
+  `}
 `

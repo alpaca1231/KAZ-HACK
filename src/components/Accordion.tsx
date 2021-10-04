@@ -1,6 +1,7 @@
 import { VFC, useState } from 'react'
 import { ChevronDown } from 'akar-icons'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 type AccordionProps = {
   className?: string
@@ -31,15 +32,15 @@ export const Accordion: VFC<AccordionProps> = ({ className, label, initialValue,
 
 const StyledAccordion = styled.div<{ isOpen: boolean }>`
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   letter-spacing: 0.05em;
   margin: 2rem 0;
   .title_box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 5px solid #333;
-    background-color: ${(props) => props.theme.colors.gray};
+    border-left: 5px solid ${(props) => props.theme.colors.navy};
+    background-color: ${(props) => props.theme.colors.white};
     padding: 1rem 2rem;
     margin-bottom: 1rem;
     h2 {
@@ -51,6 +52,34 @@ const StyledAccordion = styled.div<{ isOpen: boolean }>`
       transition: 0.5s ease-in-out;
     }
   }
+
+  .content_box {
+    word-wrap: break-word;
+    padding: ${({ isOpen }) => (isOpen ? '2rem' : 0)};
+    background-color: ${(props) => props.theme.colors.white};
+    ${({ isOpen }) => (isOpen ? '' : 'display: none;')}
+    animation: show 0.5s linear 0s;
+    h2 {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+      margin: 2rem 0;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 4rem;
+      list-style-type: square;
+      li {
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+
   @keyframes show {
     from {
       opacity: 0;
@@ -61,32 +90,25 @@ const StyledAccordion = styled.div<{ isOpen: boolean }>`
     }
   }
 
-  .content_box {
-    word-wrap: break-word;
-    padding: ${({ isOpen }) => (isOpen ? '2rem' : 0)};
-    background-color: ${(props) => props.theme.colors.white};
-    ${({ isOpen }) => (isOpen ? '' : 'display: none;')}
-    animation: show 0.5s linear 0s;
-    h2 {
-      font-size: 24px;
-      font-weight: bold;
-      padding: 0 2rem;
-      margin: 2rem 0;
+  ${sp`
+    margin: 1rem 0;
+    font-size: 14px;
+    line-height: 16px;
+    .title_box {
+      h2 {
+        font-size: 20px;
+      }
     }
-    h3 {
-      font-size: 20px;
-      font-weight: bold;
-      padding: 0 2rem;
-      margin: 1rem 0;
+    .content_box {
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      ul {
+        padding-left: 2rem;
+      }
     }
-    p {
-      padding: 0 2rem;
-      margin: 1rem 0;
-    }
-    ul {
-      font-size: 16px;
-      padding: 0 5rem;
-      list-style-type: square;
-    }
-  }
+  `}
 `

@@ -2,14 +2,17 @@ import React from 'react'
 import Image from 'next/image'
 import { ChevronDown } from 'akar-icons'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 const Top: React.FC = () => {
   return (
     <StyledTop>
-      <Image src='/eyecatch.svg' width={500} height={400} />
-      <div className='catchcopy'>
-        <h1>KAZ HACK</h1>
-        <p>自走力を武器に、成長し続ける</p>
+      <div className='inner'>
+        <Image src='/eyecatch.svg' width={500} height={400} />
+        <div className='catchcopy'>
+          <h1>KAZ HACK</h1>
+          <p>自走力を武器に、成長し続ける</p>
+        </div>
       </div>
       <ChevronDown className='scroll_btn' size={24} />
     </StyledTop>
@@ -22,15 +25,21 @@ const StyledTop = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+  .inner {
+    margin: auto 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10rem 10rem rgba(255, 255, 255, 0.8);
+    border-radius: 10rem;
+  }
   .catchcopy {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 3rem 0 7rem;
+    margin: 3rem 0;
     h1 {
       font-size: 40px;
       font-weight: bold;
@@ -44,4 +53,20 @@ const StyledTop = styled.div`
   .scroll_btn {
     margin-bottom: 5rem;
   }
+  ${sp`
+    .inner {
+      margin: auto 3rem;
+    }
+    .catchcopy {
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .scroll_btn {
+      margin-bottom: 3rem;
+    }
+  `}
 `

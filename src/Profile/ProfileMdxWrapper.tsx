@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 export const ProfileMdxWrapper: React.FC = ({ children }) => {
   return <StyledProfileMdxWrapper>{children}</StyledProfileMdxWrapper>
@@ -20,4 +21,12 @@ const StyledProfileMdxWrapper = styled.div`
   p {
     margin-bottom: 2rem;
   }
+  ${sp`
+    font-size: 16px;
+    line-height: 20px;
+    h3 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  `}
 `
