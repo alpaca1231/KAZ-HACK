@@ -58,7 +58,7 @@ const MailForm: FC = () => {
   }
 
   return (
-    <StyledMailForm className='bg'>
+    <StyledMailForm>
       <Heading>お問い合わせ</Heading>
       <form onSubmit={onSubmit} className='inputForm'>
         <p>こちらはメールでのお問い合わせフォームです。</p>
@@ -108,7 +108,6 @@ const MailForm: FC = () => {
 export default MailForm
 
 const StyledMailForm = styled.div`
-  background-color: ${(props) => props.theme.background};
   padding: 10rem 0;
   .inputForm {
     background-color: ${(props) => props.theme.colors.white};

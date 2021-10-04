@@ -10,7 +10,7 @@ import { sp } from 'styles/media'
 
 const About: FC = () => {
   return (
-    <StyledAbout className='bg'>
+    <StyledAbout>
       <Heading>About me.</Heading>
       <div className='inner'>
         <Accordion label={'Introduction'} initialValue={true}>
@@ -33,7 +33,6 @@ const About: FC = () => {
 export default About
 
 const StyledAbout = styled.div`
-  background-color: ${(props) => props.theme.background};
   padding: 10rem 0;
   min-height: calc(100vh - 20rem);
   .inner {
