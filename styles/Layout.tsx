@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import BurgerMenu from 'src/components/BurgerMenu'
-import Link from 'next/link'
-import Image from 'next/image'
 
 export const Layout: React.FC = ({ children }) => {
   return (
