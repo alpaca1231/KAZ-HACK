@@ -8,7 +8,7 @@ import { sp } from 'styles/media'
 const Contact: FC = () => {
   return (
     <StyledContact>
-      <Heading>Contact</Heading>
+      <Heading id='contact'>Contact</Heading>
       <h3>お問い合わせはメールまたはTwitterのDMでご連絡ください。</h3>
       <div className='iconList'>
         <div className='icon'>

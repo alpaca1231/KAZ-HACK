@@ -1,7 +1,6 @@
 import { FC, useState } from 'react'
 import { init, send } from 'emailjs-com'
 import { Heading } from 'src/components/Heading'
-import { HomeIcon } from 'src/components/HomeIcon'
 import { useRouter } from 'next/router'
 import { TextField } from '@material-ui/core'
 import { Send } from 'akar-icons'
@@ -102,7 +101,6 @@ const MailForm: FC = () => {
           <Send size={24} />
         </div>
       </form>
-      <HomeIcon />
     </StyledMailForm>
   )
 }
@@ -112,7 +110,6 @@ export default MailForm
 const StyledMailForm = styled.div`
   background-color: ${(props) => props.theme.background};
   padding: 10rem 0;
-  position: relative;
   .inputForm {
     background-color: ${(props) => props.theme.colors.white};
     text-align: center;
