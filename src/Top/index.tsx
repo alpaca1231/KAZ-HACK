@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { ChevronDown } from 'akar-icons'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
@@ -14,7 +15,9 @@ const Top: React.FC = () => {
           <p>自走力を武器に、成長し続ける</p>
         </div>
       </div>
-      <ChevronDown className='scroll_btn' size={24} />
+      <Link to='profile' smooth={true} duration={1000} offset={-80}>
+        <ChevronDown className='scroll_btn' size={24} />
+      </Link>
     </StyledTop>
   )
 }

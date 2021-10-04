@@ -2,22 +2,25 @@ import { FC } from 'react'
 import { Heading } from 'src/components/Heading'
 import { OutputCard } from './OutputCard'
 import IndianPoker from './IndianPoker.mdx'
+import ScrollRevealContainer from 'src/components/ScrollRevealContainer'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
 const Output: FC = () => {
   return (
     <StyledOutput>
-      <Heading>Output</Heading>
-      <div className='OutputCards'>
-        <OutputCard
-          src={'/indianPoker.gif'}
-          url={'https://indian-poker-six.vercel.app/'}
-          github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
-        >
-          <IndianPoker />
-        </OutputCard>
-      </div>
+      <Heading id='output'>Output</Heading>
+      <ScrollRevealContainer move='left'>
+        <div className='OutputCards'>
+          <OutputCard
+            src={'/indianPoker.gif'}
+            url={'https://indian-poker-six.vercel.app/'}
+            github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
+          >
+            <IndianPoker />
+          </OutputCard>
+        </div>
+      </ScrollRevealContainer>
     </StyledOutput>
   )
 }

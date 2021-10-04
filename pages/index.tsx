@@ -2,21 +2,26 @@ import Top from 'src/Top'
 import Profile from 'src/Profile'
 import Output from 'src/Output'
 import Contact from 'src/Contact'
-import styled from 'styled-components'
+import ScrollRevealContainer from 'src/components/ScrollRevealContainer'
 
 export default function Home() {
   return (
     <>
-      <TopPage>
+      <ScrollRevealContainer move='top'>
         <Top />
+      </ScrollRevealContainer>
+
+      <ScrollRevealContainer move='top'>
         <Profile />
+      </ScrollRevealContainer>
+
+      <ScrollRevealContainer move='top'>
         <Output />
+      </ScrollRevealContainer>
+
+      <ScrollRevealContainer move='top'>
         <Contact />
-      </TopPage>
+      </ScrollRevealContainer>
     </>
   )
 }
-
-const TopPage = styled.div`
-  margin: 0 auto;
-`

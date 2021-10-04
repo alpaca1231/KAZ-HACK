@@ -4,7 +4,6 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import { useRouter } from 'next/router'
 import { TextAlignRight, Cross, Home } from 'akar-icons'
 import styled from 'styled-components'
-import { sp } from 'styles/media'
 
 const BurgerMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +36,6 @@ const BurgerMenu: FC = () => {
               to=''
               smooth={true}
               duration={1000}
-              offset={-8}
               onClick={() => {
                 setIsOpen(false)
                 scroll.scrollToTop()
@@ -45,13 +43,13 @@ const BurgerMenu: FC = () => {
             >
               Top
             </Link>
-            <Link to='profile' smooth={true} duration={1000} offset={-8} onClick={() => setIsOpen(false)}>
+            <Link to='profile' smooth={true} duration={1000} offset={-50} onClick={() => setIsOpen(false)}>
               Profile
             </Link>
-            <Link to='output' smooth={true} duration={1000} offset={-8} onClick={() => setIsOpen(false)}>
+            <Link to='output' smooth={true} duration={1000} offset={-50} onClick={() => setIsOpen(false)}>
               Output
             </Link>
-            <Link to='contact' smooth={true} duration={1000} offset={-8} onClick={() => setIsOpen(false)}>
+            <Link to='contact' smooth={true} duration={1000} onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </div>
@@ -88,7 +86,7 @@ const StyledBurgerMenu = styled.div`
   }
   nav {
     width: 60%;
-    /* max-width: 300px; */
+    max-width: 300px;
     height: 100vh;
     background-color: ${(props) => props.theme.colors.white};
     box-shadow: -5rem 0 10rem rgba(3, 3, 3, 0.5);

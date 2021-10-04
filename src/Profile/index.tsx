@@ -4,25 +4,28 @@ import Link from 'next/link'
 import { Heading } from 'src/components/Heading'
 import { ChevronRight } from 'akar-icons'
 import ProfileMdx from './Profile.mdx'
+import ScrollRevealContainer from 'src/components/ScrollRevealContainer'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
 const Profile: React.FC = () => {
   return (
     <StyledProfile>
-      <Heading>Profile</Heading>
-      <div className='prof'>
-        <div className='prof_img'>
-          <Image className='myPhoto' src='/myPhoto.jpg' width={200} height={200} layout='fixed' />
+      <Heading id='profile'>Profile</Heading>
+      <ScrollRevealContainer move='bottom'>
+        <div className='prof'>
+          <div className='prof_img'>
+            <Image className='myPhoto' src='/myPhoto.jpg' width={200} height={200} layout='fixed' />
+          </div>
+          <ProfileMdx />
         </div>
-        <ProfileMdx />
-      </div>
-      <Link href='/about'>
-        <div className='btn dp_btn'>
-          Resume&nbsp;
-          <ChevronRight size={24} />
-        </div>
-      </Link>
+        <Link href='/about'>
+          <div className='btn dp_btn'>
+            Resume&nbsp;
+            <ChevronRight size={24} />
+          </div>
+        </Link>
+      </ScrollRevealContainer>
     </StyledProfile>
   )
 }
