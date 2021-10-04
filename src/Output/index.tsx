@@ -3,6 +3,7 @@ import { Heading } from 'src/components/Heading'
 import { OutputCard } from './OutputCard'
 import IndianPoker from './IndianPoker.mdx'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 const Output: FC = () => {
   return (
@@ -29,8 +30,7 @@ const StyledOutput = styled.div`
   h2 {
     color: ${(props) => props.theme.colors.white};
   }
-  /* .OutputCards {
-    display: flex;
-    justify-content: space-between;
-  } */
+  ${sp`
+    padding: 5rem 0;
+  `}
 `

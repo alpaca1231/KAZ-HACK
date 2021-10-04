@@ -3,9 +3,10 @@ import { init, send } from 'emailjs-com'
 import { Heading } from 'src/components/Heading'
 import { HomeIcon } from 'src/components/HomeIcon'
 import { useRouter } from 'next/router'
-import { Grid, TextField } from '@material-ui/core'
+import { TextField } from '@material-ui/core'
 import { Send } from 'akar-icons'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 const MailForm: FC = () => {
   const [name, setName] = useState('')
@@ -58,53 +59,49 @@ const MailForm: FC = () => {
   }
 
   return (
-    <StyledMailForm>
+    <StyledMailForm className='bg'>
       <Heading>お問い合わせ</Heading>
-      <Grid container alignItems='center' justifyContent='center'>
-        <Grid item xs={8}>
-          <form onSubmit={onSubmit} className='inputForm'>
-            <p>こちらはメールでのお問い合わせフォームです。</p>
-            <p>メール送信後はこちらからの返信をお待ち下さい。</p>
-            <TextField
-              className='inputForm_name'
-              type='text'
-              required
-              label='氏名(必須)'
-              fullWidth
-              margin='normal'
-              onChange={onChangeName}
-              value={name}
-              InputProps={{ style: { fontSize: 20 } }}
-            />
-            <TextField
-              className='inputForm_mail'
-              type='text'
-              required
-              label='メールアドレス(必須)'
-              fullWidth
-              margin='normal'
-              onChange={onChangeMail}
-              value={mail}
-              InputProps={{ style: { fontSize: 20 } }}
-            />
-            <TextField
-              className='inputForm_message'
-              type='text'
-              required
-              label='お問い合わせ内容(必須)'
-              fullWidth
-              margin='normal'
-              onChange={onChangeMessage}
-              value={message}
-              InputProps={{ style: { fontSize: 20 } }}
-            />
-            <div className='btn submit_btn'>
-              送信&nbsp;
-              <Send size={24} />
-            </div>
-          </form>
-        </Grid>
-      </Grid>
+      <form onSubmit={onSubmit} className='inputForm'>
+        <p>こちらはメールでのお問い合わせフォームです。</p>
+        <p>メール送信後はこちらからの返信をお待ち下さい。</p>
+        <TextField
+          className='inputForm_name'
+          type='text'
+          required
+          label='氏名(必須)'
+          fullWidth
+          margin='normal'
+          onChange={onChangeName}
+          value={name}
+          InputProps={{ style: { fontSize: 20 } }}
+        />
+        <TextField
+          className='inputForm_mail'
+          type='text'
+          required
+          label='メールアドレス(必須)'
+          fullWidth
+          margin='normal'
+          onChange={onChangeMail}
+          value={mail}
+          InputProps={{ style: { fontSize: 20 } }}
+        />
+        <TextField
+          className='inputForm_message'
+          type='text'
+          required
+          label='お問い合わせ内容(必須)'
+          fullWidth
+          margin='normal'
+          onChange={onChangeMessage}
+          value={message}
+          InputProps={{ style: { fontSize: 20 } }}
+        />
+        <div className='btn submit_btn'>
+          送信&nbsp;
+          <Send size={24} />
+        </div>
+      </form>
       <HomeIcon />
     </StyledMailForm>
   )
@@ -119,11 +116,20 @@ const StyledMailForm = styled.div`
   .inputForm {
     background-color: ${(props) => props.theme.colors.white};
     text-align: center;
-    line-height: 3rem;
-    font-size: 2rem;
+    line-height: 30px;
+    font-size: 20px;
     padding: 5rem;
+    margin: 3rem;
   }
   .submit_btn {
     margin: 3rem auto 0;
   }
+  ${sp`
+    .inputForm {
+      line-height: 20px;
+      font-size: 14px;
+      padding: 3rem;
+      margin: 2rem;
+    }
+  `}
 `

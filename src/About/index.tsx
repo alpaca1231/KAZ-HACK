@@ -7,10 +7,11 @@ import AppealPoint from './AppealPoint.mdx'
 import Skill from './Skill.mdx'
 import Career from './Career.mdx'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 const About: FC = () => {
   return (
-    <StyledAbout>
+    <StyledAbout className='bg'>
       <Heading>About me.</Heading>
       <div className='inner'>
         <Accordion label={'Introduction'} initialValue={true}>
@@ -42,4 +43,9 @@ const StyledAbout = styled.div`
     width: 80%;
     margin: 0 auto;
   }
+  ${sp`
+    .inner {
+      width: 90%;
+    }
+  `}
 `

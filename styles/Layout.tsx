@@ -14,7 +14,7 @@ export const Layout: React.FC = ({ children }) => {
         </Link>
         {/* <BurgerMenu /> */}
       </StyledHeader>
-      <StyledMain>{children}</StyledMain>
+      <StyledMain className='bg'>{children}</StyledMain>
       <StyledFooter></StyledFooter>
     </>
   )
