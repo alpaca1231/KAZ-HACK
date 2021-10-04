@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 export const OutputMdxWrapper: React.FC = ({ children }) => {
   return <StyledOutputMdxWrapper>{children}</StyledOutputMdxWrapper>
@@ -19,4 +20,12 @@ const StyledOutputMdxWrapper = styled.div`
   p {
     padding: 1rem;
   }
+  ${sp`
+    font-size: 14px;
+    line-height: 16px;
+    h3 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  `}
 `

@@ -1,16 +1,16 @@
 import { FC } from 'react'
 import { Heading } from 'src/components/Heading'
-import { HomeIcon } from 'src/components/HomeIcon'
 import { Accordion } from 'src/components/Accordion'
 import Introduction from './Introduction.mdx'
 import AppealPoint from './AppealPoint.mdx'
 import Skill from './Skill.mdx'
 import Career from './Career.mdx'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 const About: FC = () => {
   return (
-    <StyledAbout>
+    <StyledAbout className='bg'>
       <Heading>About me.</Heading>
       <div className='inner'>
         <Accordion label={'Introduction'} initialValue={true}>
@@ -26,7 +26,6 @@ const About: FC = () => {
           <Career />
         </Accordion>
       </div>
-      <HomeIcon />
     </StyledAbout>
   )
 }
@@ -37,9 +36,13 @@ const StyledAbout = styled.div`
   background-color: ${(props) => props.theme.background};
   padding: 10rem 0;
   min-height: calc(100vh - 20rem);
-  position: relative;
   .inner {
     width: 80%;
     margin: 0 auto;
   }
+  ${sp`
+    .inner {
+      width: 90%;
+    }
+  `}
 `

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { sp } from 'styles/media'
 
 type HeadingProps = {
   id?: string
@@ -19,9 +20,13 @@ const StyledHeading = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
-  /* padding: 10rem 0 5rem; */
   h2 {
     font-size: 36px;
     letter-spacing: 0.1em;
   }
+  ${sp`
+    h2 {
+      font-size: 28px;
+    }
+  `}
 `

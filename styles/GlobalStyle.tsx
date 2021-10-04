@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
+import { sp } from 'styles/media'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -14,6 +15,25 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     font-size: 1.6rem;
     color: #333;
+  }
+
+  .bg {
+    background: linear-gradient(45deg, #08ffc8, #fff7f7, #204969);
+    background-size: 600% 600%;
+    animation: GradientBackground 10s ease infinite;
+    @keyframes GradientBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
   }
 
   .btn {
@@ -34,6 +54,11 @@ const GlobalStyle = createGlobalStyle`
       background: ${(props) => props.theme.colors.navy};
       font-weight: bold;
     }
+    ${sp`
+      font-size: 16px;
+      width: 8rem;
+      height: 4rem;
+    `}
   }
 `
 
