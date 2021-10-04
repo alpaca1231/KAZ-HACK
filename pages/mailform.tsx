@@ -1,12 +1,15 @@
 import { FC } from 'react'
 import MailForm from 'src/Contact/MailForm'
+import { Layout } from 'styles/Layout'
 import styled from 'styled-components'
 
 const mailform: FC = () => {
   return (
-    <MailFormPage>
-      <MailForm />
-    </MailFormPage>
+    <Layout>
+      <MailFormPage>
+        <MailForm />
+      </MailFormPage>
+    </Layout>
   )
 }
 

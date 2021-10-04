@@ -2,12 +2,13 @@ import Top from 'src/Top'
 import Profile from 'src/Profile'
 import Output from 'src/Output'
 import Contact from 'src/Contact'
+import { Layout } from 'styles/Layout'
 import dynamic from 'next/dynamic'
 const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
 export default function Home() {
   return (
-    <>
+    <Layout>
       <ScrollRevealContainer move='top'>
         <Top />
       </ScrollRevealContainer>
@@ -23,6 +24,6 @@ export default function Home() {
       <ScrollRevealContainer move='top'>
         <Contact />
       </ScrollRevealContainer>
-    </>
+    </Layout>
   )
 }

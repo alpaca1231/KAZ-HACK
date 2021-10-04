@@ -11,13 +11,11 @@ const Contact: FC = () => {
       <Heading id='contact'>Contact</Heading>
       <h3>お問い合わせはメールまたはTwitterのDMでご連絡ください。</h3>
       <div className='iconList'>
-        <div className='icon'>
-          <Link href='/mailform'>
-            <div>
-              <Envelope size={30} />
-            </div>
-          </Link>
-        </div>
+        <Link href='/mailform'>
+          <div className='icon'>
+            <Envelope size={30} />
+          </div>
+        </Link>
         <a href='https://twitter.com/alpaca_1231' target='_blank' className='icon'>
           <TwitterFill size={30} />
         </a>
