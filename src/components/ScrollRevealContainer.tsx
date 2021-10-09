@@ -16,7 +16,7 @@ const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({ children, move 
         delay: 200,
         opacity: 0,
         origin: origin,
-        distance: '40px',
+        distance: '50px',
       })
   }, [sectionRef])
 

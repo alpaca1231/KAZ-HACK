@@ -1,7 +1,8 @@
 import { FC } from 'react'
 import { Heading } from 'src/components/Heading'
-import { OutputCard } from './OutputCard'
+import OutputCard from './OutputCard'
 import IndianPoker from './IndianPoker.mdx'
+import Tagiron from './Tagiron.mdx'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
@@ -13,15 +14,23 @@ const Output: FC = () => {
     <StyledOutput>
       <Heading id='output'>Output</Heading>
       <ScrollRevealContainer move='left'>
-        <div className='OutputCards'>
-          <OutputCard
-            src={'/indianPoker.gif'}
-            url={'https://indian-poker-six.vercel.app/'}
-            github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
-          >
-            <IndianPoker />
-          </OutputCard>
-        </div>
+        <OutputCard
+          src={'/indianPoker.gif'}
+          url={'https://indian-poker-six.vercel.app/'}
+          github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
+        >
+          <IndianPoker />
+        </OutputCard>
+      </ScrollRevealContainer>
+      <ScrollRevealContainer move='right'>
+        <OutputCard
+          className='right'
+          // src={''}
+          // url={''}
+          // github_url={''}
+        >
+          <Tagiron />
+        </OutputCard>
       </ScrollRevealContainer>
     </StyledOutput>
   )
@@ -34,6 +43,12 @@ const StyledOutput = styled.div`
   padding: 10rem 0;
   h2 {
     color: ${(props) => props.theme.colors.white};
+  }
+  section:nth-child(n + 2) {
+    margin-top: 5rem;
+  }
+  .right {
+    margin-left: auto;
   }
   ${sp`
     padding: 5rem 0;
