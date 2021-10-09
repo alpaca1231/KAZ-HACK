@@ -17,14 +17,15 @@ type OutputCardProps = {
 const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_url, children }) => {
   scrollReveal().reveal('.left', {
     reset: true,
-    delay: 500,
+    // delay: 500,
     opacity: 0,
     origin: 'left',
     distance: '50px',
   })
+
   scrollReveal().reveal('.right', {
     reset: true,
-    delay: 500,
+    delay: 100,
     opacity: 0,
     origin: 'right',
     distance: '50px',
