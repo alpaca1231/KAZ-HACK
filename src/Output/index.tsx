@@ -1,28 +1,33 @@
 import { FC } from 'react'
 import { Heading } from 'src/components/Heading'
-import { OutputCard } from './OutputCard'
 import IndianPoker from './IndianPoker.mdx'
+import Tagiron from './Tagiron.mdx'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
 import dynamic from 'next/dynamic'
-const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
+const OutputCard = dynamic(() => import('src/Output/OutputCard'), { ssr: false })
 
 const Output: FC = () => {
   return (
     <StyledOutput>
       <Heading id='output'>Output</Heading>
-      <ScrollRevealContainer move='left'>
-        <div className='OutputCards'>
-          <OutputCard
-            src={'/indianPoker.gif'}
-            url={'https://indian-poker-six.vercel.app/'}
-            github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
-          >
-            <IndianPoker />
-          </OutputCard>
-        </div>
-      </ScrollRevealContainer>
+      <OutputCard
+        className='left'
+        src={'/indianPoker.gif'}
+        url={'https://indian-poker-six.vercel.app/'}
+        github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
+      >
+        <IndianPoker />
+      </OutputCard>
+      <OutputCard
+        className='right'
+        // src={''}
+        // url={''}
+        // github_url={''}
+      >
+        <Tagiron />
+      </OutputCard>
     </StyledOutput>
   )
 }
@@ -34,6 +39,10 @@ const StyledOutput = styled.div`
   padding: 10rem 0;
   h2 {
     color: ${(props) => props.theme.colors.white};
+  }
+  .right {
+    margin-top: 5rem;
+    margin-left: auto;
   }
   ${sp`
     padding: 5rem 0;
