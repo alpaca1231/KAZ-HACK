@@ -1,7 +1,6 @@
 import { VFC } from 'react'
 import Image from 'next/image'
 import { LinkOut, OctocatFill } from 'akar-icons'
-import scrollReveal from 'scrollreveal'
 
 import styled from 'styled-components'
 import { sp, tab } from 'styles/media'
