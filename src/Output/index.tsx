@@ -22,7 +22,7 @@ const Output: FC = () => {
           <IndianPoker />
         </OutputCard>
       </ScrollRevealContainer>
-      <ScrollRevealContainer move='right'>
+      <ScrollRevealContainer move='left'>
         <OutputCard
           className='right'
           // src={''}
