@@ -1,6 +1,6 @@
 # KAZ HACK
 
-kazhack.vercel.app/
+https://kazhack.vercel.app/
 
 ## Introduction
 
