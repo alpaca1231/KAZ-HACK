@@ -35,6 +35,9 @@ export default About
 const StyledAbout = styled.div`
   padding: 10rem 0;
   min-height: calc(100vh - 20rem);
+  h3 {
+    padding: 1rem 0 0.5rem;
+  }
   .inner {
     width: 80%;
     margin: 0 auto;
