@@ -19,7 +19,7 @@ const Contact: FC = () => {
         <a href='https://twitter.com/alpaca_1231' target='_blank' className='icon'>
           <TwitterFill size={30} />
         </a>
-        <a href='https://github.com/KazukiAmatatsu' target='_blank' className='icon'>
+        <a href='https://github.com/alpaca1231' target='_blank' className='icon'>
           <GithubFill size={30} />
         </a>
       </div>
