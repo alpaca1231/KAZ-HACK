@@ -17,7 +17,7 @@ const Output: FC = () => {
         <OutputCard
           src={'/indianPoker.gif'}
           url={'https://indian-poker-six.vercel.app/'}
-          github_url={'https://github.com/KazukiAmatatsu/indian-poker'}
+          github_url={'https://github.com/alpaca1231/indian-poker'}
         >
           <IndianPoker />
         </OutputCard>
