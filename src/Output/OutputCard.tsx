@@ -23,20 +23,24 @@ const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_url, chi
       </div>
       <div className='content'>
         {children}
-        {url && github_url ? (
-          <div className='content_btn'>
+        <div className='content_btn'>
+          {url ? (
             <a href={url} className='btn url_btn' target='_blank'>
               URL&nbsp;
               <LinkOut size={24} />
             </a>
+          ) : (
+            <></>
+          )}
+          {github_url ? (
             <a href={github_url} className='btn github_btn' target='_blank'>
               GitHub&nbsp;
               <OctocatFill size={24} />
             </a>
-          </div>
-        ) : (
-          <></>
-        )}
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </StyledOutputCard>
   )

@@ -3,6 +3,7 @@ import { Heading } from 'src/components/Heading'
 import OutputCard from './OutputCard'
 import IndianPoker from './IndianPoker.mdx'
 import Tagiron from './Tagiron.mdx'
+import Writing from './Writing.mdx'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
@@ -25,6 +26,16 @@ const Output: FC = () => {
       <ScrollRevealContainer move='left'>
         <OutputCard
           className='right'
+          src={'/zenn.png'}
+          url={'https://zenn.dev/kazhack'}
+          // github_url={''}
+        >
+          <Writing />
+        </OutputCard>
+      </ScrollRevealContainer>
+      <ScrollRevealContainer move='left'>
+        <OutputCard
+          className='left'
           // src={''}
           // url={''}
           // github_url={''}
