@@ -1,11 +1,11 @@
-import React from 'react'
+import { VFC } from 'react'
 import Image from 'next/image'
 import { ChevronDown } from 'akar-icons'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-const Top: React.FC = () => {
+const Top: VFC = () => {
   return (
     <StyledTop>
       <div className='inner'>

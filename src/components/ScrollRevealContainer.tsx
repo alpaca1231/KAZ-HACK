@@ -1,21 +1,21 @@
-import { FC, useRef, useEffect } from 'react'
+import { VFC, useRef, useEffect } from 'react'
 import scrollReveal from 'scrollreveal'
 
 interface ScrollRevealContainerProps {
-  move?: string
+  move?: 'top' | 'left' | 'right' | 'bottom'
+  children: React.ReactNode
 }
 
-const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({ children, move }) => {
+const ScrollRevealContainer: VFC<ScrollRevealContainerProps> = ({ children, move }) => {
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const origin = move === 'left' ? 'left' : move === 'right' ? 'right' : move === 'top' ? 'top' : 'bottom'
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
         reset: true,
         delay: 200,
         opacity: 0,
-        origin: origin,
+        origin: move ? move : 'bottom',
         distance: '50px',
       })
   }, [sectionRef])

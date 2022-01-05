@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import { Heading } from 'src/components/Heading'
 import { Accordion } from 'src/components/Accordion'
 import Introduction from './Introduction.mdx'
@@ -8,7 +8,7 @@ import Career from './Career.mdx'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-const About: FC = () => {
+const About: VFC = () => {
   return (
     <StyledAbout>
       <Heading>About me.</Heading>

@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Heading } from 'src/components/Heading'
@@ -10,7 +10,7 @@ import { sp } from 'styles/media'
 import dynamic from 'next/dynamic'
 const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
-const Profile: React.FC = () => {
+const Profile: VFC = () => {
   return (
     <StyledProfile>
       <Heading id='profile'>Profile</Heading>

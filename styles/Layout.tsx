@@ -1,8 +1,12 @@
-import React from 'react'
+import { VFC } from 'react'
 import styled from 'styled-components'
 import BurgerMenu from 'src/components/BurgerMenu'
 
-export const Layout: React.FC = ({ children }) => {
+type LayoutProps = {
+  children: React.ReactNode
+}
+
+export const Layout: VFC<LayoutProps> = ({ children }) => {
   return (
     <StyledLayout className='bg'>
       <header>

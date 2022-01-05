@@ -1,8 +1,12 @@
-import React from 'react'
+import { VFC } from 'react'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-export const ProfileMdxWrapper: React.FC = ({ children }) => {
+type ProfileMdxWrapperProps = {
+  children: React.ReactNode
+}
+
+export const ProfileMdxWrapper: VFC<ProfileMdxWrapperProps> = ({ children }) => {
   return <StyledProfileMdxWrapper>{children}</StyledProfileMdxWrapper>
 }
 

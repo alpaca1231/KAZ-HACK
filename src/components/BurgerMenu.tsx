@@ -1,20 +1,20 @@
-import { FC, useState, useEffect } from 'react'
+import { VFC, useState, useEffect } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import { useRouter } from 'next/router'
 import { TextAlignRight, Cross, Home } from 'akar-icons'
 import styled from 'styled-components'
 
-const BurgerMenu: FC = () => {
+const BurgerMenu: VFC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
     if (isOpen) {
       disableBodyScroll(document.body)
-    } else {
-      clearAllBodyScrollLocks()
+      return
     }
+    clearAllBodyScrollLocks()
   }, [isOpen])
 
   if (router.pathname === '/') {
@@ -56,13 +56,12 @@ const BurgerMenu: FC = () => {
         </nav>
       </StyledBurgerMenu>
     )
-  } else {
-    return (
-      <StyledHomeBtn onClick={() => router.back()}>
-        <Home size={30} />
-      </StyledHomeBtn>
-    )
   }
+  return (
+    <StyledHomeBtn onClick={() => router.back()}>
+      <Home size={30} />
+    </StyledHomeBtn>
+  )
 }
 
 export default BurgerMenu

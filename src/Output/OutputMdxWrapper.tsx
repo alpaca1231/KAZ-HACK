@@ -1,8 +1,12 @@
-import React from 'react'
+import { VFC } from 'react'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-export const OutputMdxWrapper: React.FC = ({ children }) => {
+type OutputMdxWrapperProps = {
+  children: React.ReactNode
+}
+
+export const OutputMdxWrapper: VFC<OutputMdxWrapperProps> = ({ children }) => {
   return <StyledOutputMdxWrapper>{children}</StyledOutputMdxWrapper>
 }
 

@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { VFC, useState, ChangeEvent } from 'react'
 import { init, send } from 'emailjs-com'
 import { Heading } from 'src/components/Heading'
 import { useRouter } from 'next/router'
@@ -7,7 +7,7 @@ import { Send } from 'akar-icons'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-const MailForm: FC = () => {
+const MailForm: VFC = () => {
   const [name, setName] = useState('')
   const [mail, setMail] = useState('')
   const [message, setMessage] = useState('')
@@ -19,12 +19,7 @@ const MailForm: FC = () => {
     const template_id_user = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_USER
     const template_id_me = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ME
 
-    if (
-      user_id !== undefined &&
-      service_id !== undefined &&
-      template_id_user !== undefined &&
-      template_id_me !== undefined
-    ) {
+    if (user_id && service_id && template_id_user && template_id_me) {
       init(user_id)
 
       const template_param = {
@@ -39,20 +34,20 @@ const MailForm: FC = () => {
       })
     }
   }
-  const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeName = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault()
     setName(e.target.value)
   }
-  const onChangeMail = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeMail = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault()
     setMail(e.target.value)
   }
-  const onChangeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const onChangeMessage = (e: ChangeEvent<HTMLTextAreaElement>) => {
     e.preventDefault()
     setMessage(e.target.value)
   }
 
-  const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+  const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault()
     sendEmail()
   }
