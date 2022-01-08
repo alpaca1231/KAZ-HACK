@@ -1,6 +1,6 @@
 import { VFC } from 'react'
-import styled from 'styled-components'
 import BurgerMenu from 'src/components/BurgerMenu'
+import styled from 'styled-components'
 
 type LayoutProps = {
   children: React.ReactNode

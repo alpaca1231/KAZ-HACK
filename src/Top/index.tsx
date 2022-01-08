@@ -1,6 +1,6 @@
-import { VFC } from 'react'
-import Image from 'next/image'
 import { ChevronDown } from 'akar-icons'
+import Image from 'next/image'
+import { VFC } from 'react'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
@@ -9,7 +9,7 @@ const Top: VFC = () => {
   return (
     <StyledTop>
       <div className='inner'>
-        <Image src='/eyecatch.svg' width={500} height={400} />
+        <Image src='/eyecatch.svg' width={500} height={400} alt='eyeCatch' />
         <div className='catchcopy'>
           <h1>KAZ HACK</h1>
           <p>自走力を武器に、成長し続ける</p>

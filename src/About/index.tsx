@@ -1,12 +1,13 @@
 import { VFC } from 'react'
-import { Heading } from 'src/components/Heading'
 import { Accordion } from 'src/components/Accordion'
-import Introduction from './Introduction.mdx'
-import AppealPoint from './AppealPoint.mdx'
-import Skill from './Skill.mdx'
-import Career from './Career.mdx'
+import { Heading } from 'src/components/Heading'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
+
+import AppealPoint from './AppealPoint.mdx'
+import Career from './Career.mdx'
+import Introduction from './Introduction.mdx'
+import Skill from './Skill.mdx'
 
 const About: VFC = () => {
   return (

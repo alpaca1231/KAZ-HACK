@@ -1,13 +1,13 @@
-import { VFC } from 'react'
+import { ChevronRight } from 'akar-icons'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
+import { VFC } from 'react'
 import { Heading } from 'src/components/Heading'
-import { ChevronRight } from 'akar-icons'
-import ProfileMdx from './Profile.mdx'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-import dynamic from 'next/dynamic'
+import ProfileMdx from './Profile.mdx'
 const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
 const Profile: VFC = () => {
@@ -17,11 +17,11 @@ const Profile: VFC = () => {
       <ScrollRevealContainer move='bottom'>
         <div className='prof'>
           <div className='prof_img'>
-            <Image className='myPhoto' src='/myPhoto.jpg' width={200} height={200} layout='fixed' />
+            <Image className='myPhoto' src='/myPhoto.jpg' width={200} height={200} layout='fixed' alt='myPhotoImage' />
           </div>
           <ProfileMdx />
         </div>
-        <Link href='/about'>
+        <Link href='/about' passHref>
           <div className='btn dp_btn'>
             Resume&nbsp;
             <ChevronRight size={24} />

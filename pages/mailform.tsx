@@ -1,7 +1,7 @@
 import { VFC } from 'react'
 import MailForm from 'src/Contact/MailForm'
-import { Layout } from 'styles/Layout'
 import styled from 'styled-components'
+import { Layout } from 'styles/Layout'
 
 const mailform: VFC = () => {
   return (

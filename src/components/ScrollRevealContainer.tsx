@@ -1,4 +1,4 @@
-import { VFC, useRef, useEffect } from 'react'
+import { useEffect, useRef, VFC } from 'react'
 import scrollReveal from 'scrollreveal'
 
 interface ScrollRevealContainerProps {
@@ -18,7 +18,7 @@ const ScrollRevealContainer: VFC<ScrollRevealContainerProps> = ({ children, move
         origin: move ? move : 'bottom',
         distance: '50px',
       })
-  }, [sectionRef])
+  }, [sectionRef, move])
 
   return <section ref={sectionRef}>{children}</section>
 }
