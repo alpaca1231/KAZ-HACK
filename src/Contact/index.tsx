@@ -1,7 +1,7 @@
+import { Envelope, GithubFill, TwitterFill } from 'akar-icons'
+import Link from 'next/link'
 import { FC } from 'react'
 import { Heading } from 'src/components/Heading'
-import Link from 'next/link'
-import { Envelope, TwitterFill, GithubFill } from 'akar-icons'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
@@ -11,15 +11,15 @@ const Contact: FC = () => {
       <Heading id='contact'>Contact</Heading>
       <h3>お問い合わせはメールまたはTwitterのDMでご連絡ください。</h3>
       <div className='iconList'>
-        <Link href='/mailform'>
+        <Link href='/mailform' passHref>
           <div className='icon'>
             <Envelope size={30} />
           </div>
         </Link>
-        <a href='https://twitter.com/alpaca_1231' target='_blank' className='icon'>
+        <a href='https://twitter.com/alpaca_1231' target='_blank' className='icon' rel='noreferrer'>
           <TwitterFill size={30} />
         </a>
-        <a href='https://github.com/alpaca1231' target='_blank' className='icon'>
+        <a href='https://github.com/alpaca1231' target='_blank' className='icon' rel='noreferrer'>
           <GithubFill size={30} />
         </a>
       </div>

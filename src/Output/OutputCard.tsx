@@ -1,7 +1,6 @@
-import { VFC } from 'react'
-import Image from 'next/image'
 import { LinkOut, OctocatFill } from 'akar-icons'
-
+import Image from 'next/image'
+import { VFC } from 'react'
 import styled from 'styled-components'
 import { sp, tab } from 'styles/media'
 
@@ -18,14 +17,18 @@ const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_url, chi
     <StyledOutputCard className={`${className}`}>
       <div className='sample_img'>
         <a href={url}>
-          {src ? <Image src={src} width={400} height={300} /> : <div className='ComingSoon'>Coming soon...</div>}
+          {src ? (
+            <Image src={src} width={400} height={300} alt='outputCardImage' />
+          ) : (
+            <div className='ComingSoon'>Coming soon...</div>
+          )}
         </a>
       </div>
       <div className='content'>
         {children}
         <div className='content_btn'>
           {url ? (
-            <a href={url} className='btn url_btn' target='_blank'>
+            <a href={url} className='btn url_btn' target='_blank' rel="noreferrer">
               URL&nbsp;
               <LinkOut size={24} />
             </a>
@@ -33,7 +36,7 @@ const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_url, chi
             <></>
           )}
           {github_url ? (
-            <a href={github_url} className='btn github_btn' target='_blank'>
+            <a href={github_url} className='btn github_btn' target='_blank' rel="noreferrer">
               GitHub&nbsp;
               <OctocatFill size={24} />
             </a>

@@ -1,10 +1,12 @@
-import GlobalStyle from 'styles/GlobalStyle'
+/** @see https://nextjs.org/docs/basic-features/typescript#custom-app */
+import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
+import GlobalStyle from 'styles/GlobalStyle'
 import { theme } from 'styles/theme'
-import { Layout } from 'styles/Layout'
 
-function MyApp({ Component, pageProps }) {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
