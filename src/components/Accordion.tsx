@@ -1,5 +1,5 @@
-import { VFC, useState } from 'react'
 import { ChevronDown } from 'akar-icons'
+import { useState,VFC } from 'react'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
@@ -13,7 +13,7 @@ type AccordionProps = {
 export const Accordion: VFC<AccordionProps> = ({ className, label, initialValue, children }) => {
   const [isOpen, setIsOpen] = useState(initialValue)
   return (
-    <StyledAccordion className={`${className}`} isOpen={isOpen}>
+    <StyledAccordion className={className} isOpen={isOpen}>
       <div
         className='title_box'
         onClick={() => {

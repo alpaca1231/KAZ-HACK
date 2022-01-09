@@ -1,9 +1,9 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import About from 'src/About'
-import { Layout } from 'styles/Layout'
 import styled from 'styled-components'
+import { Layout } from 'styles/Layout'
 
-const about: FC = () => {
+const about: VFC = () => {
   return (
     <Layout>
       <AboutPage>

@@ -1,15 +1,15 @@
-import { FC } from 'react'
+import dynamic from 'next/dynamic'
+import { VFC } from 'react'
 import { Heading } from 'src/components/Heading'
-import OutputCard from './OutputCard'
-import IndianPoker from './IndianPoker.mdx'
-import Tagiron from './Tagiron.mdx'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-import dynamic from 'next/dynamic'
+import IndianPoker from './IndianPoker.mdx'
+import OutputCard from './OutputCard'
+import Tagiron from './Tagiron.mdx'
 const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
-const Output: FC = () => {
+const Output: VFC = () => {
   return (
     <StyledOutput>
       <Heading id='output'>Output</Heading>
@@ -23,12 +23,7 @@ const Output: FC = () => {
         </OutputCard>
       </ScrollRevealContainer>
       <ScrollRevealContainer move='left'>
-        <OutputCard
-          className='right'
-          // src={''}
-          // url={''}
-          // github_url={''}
-        >
+        <OutputCard className='right'>
           <Tagiron />
         </OutputCard>
       </ScrollRevealContainer>

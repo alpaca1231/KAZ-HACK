@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
@@ -7,7 +7,7 @@ type HeadingProps = {
   children: React.ReactNode
 }
 
-export const Heading: React.VFC<HeadingProps> = ({ id, children }) => {
+export const Heading: VFC<HeadingProps> = ({ id, children }) => {
   return (
     <StyledHeading>
       <h2 id={id}>{children}</h2>
