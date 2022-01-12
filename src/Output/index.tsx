@@ -26,21 +26,21 @@ const Output: VFC = () => {
       <ScrollRevealContainer move='left'>
         <OutputCard
           className='right'
-          src={'/zenn.png'}
-          url={'https://zenn.dev/kazhack'}
-          // github_url={''}
-        >
-          <Writing />
-        </OutputCard>
-      </ScrollRevealContainer>
-      <ScrollRevealContainer move='left'>
-        <OutputCard
-          className='left'
           // src={''}
           // url={''}
           // github_url={''}
         >
           <Tagiron />
+        </OutputCard>
+      </ScrollRevealContainer>
+      <ScrollRevealContainer move='left'>
+        <OutputCard
+          className='left'
+          src={'/zenn.png'}
+          url={'https://zenn.dev/kazhack'}
+          // github_url={''}
+        >
+          <Writing />
         </OutputCard>
       </ScrollRevealContainer>
     </StyledOutput>
