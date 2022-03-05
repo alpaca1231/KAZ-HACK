@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --dir src",
-    "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix",
+    "lint": "next lint --dir pages --dir src",
+    "lint:fix": "eslint src pages --ext .js,jsx,.ts,.tsx --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
   },
   "dependencies": {
@@ -16,7 +16,8 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@material-ui/core": "^4.12.3",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@mdx-js/loader": "^1.6.22",
     "@mui/material": "^5.0.2",
     "@mui/styled-engine-sc": "^5.0.0",
@@ -40,6 +41,7 @@
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.4.1",
     "react-scroll": "^1.8.4",
     "scrollreveal": "^4.0.9",

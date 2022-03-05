@@ -1,15 +1,17 @@
-import { FC } from 'react'
+import dynamic from 'next/dynamic'
+import { VFC } from 'react'
 import { Heading } from 'src/components/Heading'
-import OutputCard from './OutputCard'
-import IndianPoker from './IndianPoker.mdx'
-import Tagiron from './Tagiron.mdx'
 import styled from 'styled-components'
 import { sp } from 'styles/media'
 
-import dynamic from 'next/dynamic'
+import IndianPoker from './IndianPoker.mdx'
+import OutputCard from './OutputCard'
+import Tagiron from './Tagiron.mdx'
+import TechOutputCard from './TechOutputCard'
+import Writing from './Writing.mdx'
 const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
-const Output: FC = () => {
+const Output: VFC = () => {
   return (
     <StyledOutput>
       <Heading id='output'>Output</Heading>
@@ -31,6 +33,21 @@ const Output: FC = () => {
         >
           <Tagiron />
         </OutputCard>
+      </ScrollRevealContainer>
+      <ScrollRevealContainer move='left'>
+        <TechOutputCard
+          src={'/zenn.png'}
+          zennUrl={'https://zenn.dev/kazhack'}
+          qiitaUrl={'https://qiita.com/alpaca1231'}
+          noteUrl={'https://note.com/alpaca_1231'}
+        >
+          <Writing />
+        </TechOutputCard>
+        {/* <OutputCard
+          className='left'
+          // github_url={''}
+        >
+        </OutputCard> */}
       </ScrollRevealContainer>
     </StyledOutput>
   )
