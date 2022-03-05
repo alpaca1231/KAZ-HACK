@@ -4,19 +4,20 @@ import { VFC } from 'react'
 import styled from 'styled-components'
 import { sp, tab } from 'styles/media'
 
-type OutputCardProps = {
+type TechOutputCardProps = {
   className?: string
-  src?: string
-  url?: string
-  github_url?: string
+  src: string
+  zennUrl: string
+  qiitaUrl: string
+  noteUrl: string
   children: React.ReactNode
 }
 
-const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_url, children }) => {
+const TechOutputCard: VFC<TechOutputCardProps> = ({ src, zennUrl, qiitaUrl, noteUrl, children }) => {
   return (
-    <StyledOutputCard className={`${className}`}>
+    <StyledTechOutputCard>
       <div className='sample_img'>
-        <a href={url}>
+        <a href={zennUrl}>
           {src ? (
             <Image src={src} width={400} height={300} alt='outputCardImage' />
           ) : (
@@ -27,31 +28,39 @@ const OutputCard: VFC<OutputCardProps> = ({ className, src, url, github_url, chi
       <div className='content'>
         {children}
         <div className='content_btn'>
-          {url ? (
-            <a href={url} className='btn url_btn' target='_blank' rel="noreferrer">
-              URL&nbsp;
+          {zennUrl ? (
+            <a href={zennUrl} className='btn url_btn' target='_blank' rel='noreferrer'>
+              Zenn&nbsp;
               <LinkOut size={24} />
             </a>
           ) : (
             <></>
           )}
-          {github_url ? (
-            <a href={github_url} className='btn github_btn' target='_blank' rel="noreferrer">
-              GitHub&nbsp;
-              <OctocatFill size={24} />
+          {qiitaUrl ? (
+            <a href={qiitaUrl} className='btn github_btn' target='_blank' rel='noreferrer'>
+              Qiita&nbsp;
+              <LinkOut size={24} />
+            </a>
+          ) : (
+            <></>
+          )}
+          {noteUrl ? (
+            <a href={qiitaUrl} className='btn github_btn' target='_blank' rel='noreferrer'>
+              note&nbsp;
+              <LinkOut size={24} />
             </a>
           ) : (
             <></>
           )}
         </div>
       </div>
-    </StyledOutputCard>
+    </StyledTechOutputCard>
   )
 }
 
-export default OutputCard
+export default TechOutputCard
 
-const StyledOutputCard = styled.div`
+const StyledTechOutputCard = styled.div`
   width: 80vw;
   display: flex;
   justify-content: center;
