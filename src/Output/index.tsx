@@ -7,6 +7,7 @@ import { sp } from 'styles/media'
 import IndianPoker from './IndianPoker.mdx'
 import OutputCard from './OutputCard'
 import Tagiron from './Tagiron.mdx'
+import TechOutputCard from './TechOutputCard'
 import Writing from './Writing.mdx'
 const ScrollRevealContainer = dynamic(import('src/components/ScrollRevealContainer'), { ssr: false })
 
@@ -34,14 +35,19 @@ const Output: VFC = () => {
         </OutputCard>
       </ScrollRevealContainer>
       <ScrollRevealContainer move='left'>
-        <OutputCard
-          className='left'
+        <TechOutputCard
           src={'/zenn.png'}
-          url={'https://zenn.dev/kazhack'}
-          // github_url={''}
+          zennUrl={'https://zenn.dev/kazhack'}
+          qiitaUrl={'https://qiita.com/alpaca1231'}
+          noteUrl={'https://note.com/alpaca_1231'}
         >
           <Writing />
-        </OutputCard>
+        </TechOutputCard>
+        {/* <OutputCard
+          className='left'
+          // github_url={''}
+        >
+        </OutputCard> */}
       </ScrollRevealContainer>
     </StyledOutput>
   )
